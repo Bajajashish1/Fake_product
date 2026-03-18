@@ -1,0 +1,41 @@
+{
+  "timestamp": "2025-10-12T08:53:03.586Z",
+  "systemInfo": {
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "platform": "Win32",
+    "language": "en-US",
+    "cookieEnabled": true,
+    "onlineStatus": true,
+    "screen": {
+      "width": 1536,
+      "height": 864,
+      "colorDepth": 24
+    },
+    "viewport": {
+      "width": 1536,
+      "height": 730
+    },
+    "memory": 8,
+    "cores": 12,
+    "connection": {
+      "effectiveType": "4g",
+      "downlink": 10,
+      "rtt": 100
+    }
+  },
+  "performanceMetrics": {
+    "Model Initialization": {
+      "lastDuration": 1002.1999999880791,
+      "avgDuration": 1002.3499999940395,
+      "calls": 2,
+      "lastCall": "2025-10-12T08:52:40.184Z"
+    }
+  },
+  "debugLog": [],
+  "analysisHistory": [],
+  "userPreferences": {
+    "autoSave": false,
+    "darkMode": false,
+    "debugMode": false
+  }
+}

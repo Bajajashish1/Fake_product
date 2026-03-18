@@ -1,184 +1,75 @@
-Fake Product Detection Using YOLOv8
-1. Introduction
+# Counterfeit Product Detection System
 
-Counterfeit products have become a major issue in global markets, affecting both consumers and brand manufacturers. Fake products not only reduce brand value but can also harm consumer safety, especially in industries such as cosmetics, pharmaceuticals, electronics, and fashion. Traditional methods of detecting counterfeit products rely on manual inspection, which is time-consuming and often inaccurate.
+A robust system for detecting counterfeit products using computer vision and machine learning.
 
-With the advancement of Artificial Intelligence and Computer Vision, automated systems can now analyze product images and identify whether a product is authentic or counterfeit. This project proposes a deep learning–based fake product detection system using YOLOv8, which can detect and classify products in real time.
+## Project Structure
 
-2. Problem Statement
+```
+├── config/              # Configuration files
+├── data/               # Data storage
+│   ├── dataset/        # Training and validation datasets
+│   └── models/         # Model files
+├── docs/               # Documentation
+├── product_history/    # Analysis history and database
+├── src/               # Source code
+│   ├── core/          # Core functionality
+│   └── utils/         # Utility functions
+├── tests/             # Test files
+└── mobile-app/        # Mobile application
+```
 
-The rapid increase in counterfeit products across online and offline markets makes it difficult for consumers and retailers to identify fake items. Manual verification methods are inefficient, and existing automated systems often lack accuracy and scalability.
+## Setup
 
-Therefore, there is a need for a smart system that can automatically detect counterfeit products from images using deep learning techniques.
+1. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-3. Objectives of the Project
+2. Configure the environment:
+```bash
+python setup.py
+```
 
-The main objectives of the project are:
+3. Start the dashboard:
+```bash
+streamlit run src/core/dashboard.py
+```
 
-To develop an automated system for detecting fake products using deep learning.
+## Features
 
-To use YOLOv8 object detection model for accurate and fast product recognition.
+- Product authenticity analysis
+- Image-based counterfeit detection
+- Historical analysis tracking
+- Mobile app integration
+- Database management
+- Export and reporting capabilities
 
-To create a dataset of real and fake product images for training the model.
+## Directory Contents
 
-To improve detection accuracy through image preprocessing and data augmentation.
+- `src/core/`: Main application code
+  - `dashboard.py`: Main web interface
+  - `database_manager.py`: Database operations
+  - `model_manager.py`: ML model operations
 
-To enable real-time counterfeit product detection for consumers and businesses.
+- `src/utils/`: Helper functions and utilities
+  - `image_utils.py`: Image processing
+  - `data_utils.py`: Data handling
 
-4. Technologies Used
-Programming Language
+- `config/`: Configuration files
+  - `app_config.py`: Application settings
+  - `model_config.yaml`: Model parameters
 
-Python
+## Usage
 
-Deep Learning Framework
+1. Launch the dashboard
+2. Upload product images
+3. View analysis results
+4. Access history and reports
 
-YOLOv8 (You Only Look Once Version 8)
+## Mobile App
 
-Libraries
+The mobile app component is in the `mobile-app/` directory.
 
-OpenCV
+## Documentation
 
-NumPy
-
-Pandas
-
-PyTorch
-
-Ultralytics YOLO
-
-Tools
-
-Google Colab / Jupyter Notebook
-
-Roboflow (for dataset annotation)
-
-LabelImg (for bounding box labeling)
-
-5. System Architecture
-
-The system works in several stages:
-
-Data Collection
-
-Data Preprocessing
-
-Image Annotation
-
-Model Training using YOLOv8
-
-Model Evaluation
-
-Deployment and Prediction
-
-The system takes an image as input and detects whether the product is original or counterfeit using trained deep learning models.
-
-6. Working of the System
-Step 1: Data Collection
-
-Images of authentic and counterfeit products are collected from various sources such as:
-
-Online marketplaces
-
-Brand product catalogs
-
-Image datasets
-
-The dataset includes images taken under different lighting conditions, backgrounds, and angles.
-
-Step 2: Data Preprocessing
-
-The collected images undergo preprocessing to improve model performance.
-
-Preprocessing steps include:
-
-Image resizing (e.g., 640×640 pixels)
-
-Noise reduction
-
-Data augmentation (rotation, flipping, brightness adjustment)
-
-These steps help the model learn better features.
-
-Step 3: Image Annotation
-
-Each image is labeled with bounding boxes indicating the location of the product.
-
-Example classes:
-
-Real Product
-
-Fake Product
-
-Annotation tools such as Roboflow or LabelImg are used to create YOLO format labels.
-
-Step 4: Model Training
-
-The YOLOv8 model is trained using the prepared dataset.
-
-Training involves:
-
-Loading the dataset
-
-Applying pretrained YOLOv8 weights
-
-Running multiple epochs
-
-Adjusting hyperparameters
-
-During training, the model learns to identify patterns that differentiate authentic products from counterfeit ones.
-
-Step 5: Model Evaluation
-
-After training, the model is tested using a validation dataset.
-
-Evaluation metrics include:
-
-Precision
-
-Recall
-
-F1 Score
-
-Mean Average Precision (mAP)
-
-These metrics help measure how accurately the model detects counterfeit products.
-
-Step 6: Detection and Prediction
-
-Once the model is trained, it can analyze new product images.
-
-The system:
-
-Accepts an image as input.
-
-Detects objects using YOLOv8.
-
-Draws bounding boxes around detected products.
-
-Displays whether the product is real or fake with a confidence score.
-
-7. Advantages of the Proposed System
-
-High detection accuracy using YOLOv8.
-
-Real-time object detection capability.
-
-Can be integrated with mobile or web applications.
-
-Reduces manual effort in identifying counterfeit products.
-
-Helps protect consumers and brands from fraud.
-
-8. Applications
-
-The system can be used in:
-
-E-commerce platforms
-
-Retail stores
-
-Brand authentication systems
-
-Supply chain monitoring
-
-Consumer product verification apps
+Detailed documentation is available in the `docs/` directory.
